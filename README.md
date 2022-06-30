@@ -14,10 +14,13 @@ Store the California residential properties data in a postgres database and crea
 ```
 
 **Requirements**
-- Store the properties.csv in S3
-- Create service Ingest from S3 and store the attached properties.csv into a AWS Postgres RDS database.
+- Create service to:
+  - Retrieve zip file from S3 https://trusty-dev-test.s3.us-west-2.amazonaws.com/property.zip
+  - Unzip file
+  - Ingest from S3 and store the attached properties.csv into a AWS Postgres RDS database.
 - Optimize table for searching address
 - Create lamda endpoint that returns property data based on address input
+- Share cloned repo of your work
 - Provide curl example to consume endpoint
 
 **Technology Stack**
@@ -31,3 +34,6 @@ Store the California residential properties data in a postgres database and crea
 - Use Elastic Search
 - Simple front end that allows searching of addresses
 - Tests
+
+**Tips**
+- Lambdas have memory limit and may not work for unzipping the file
